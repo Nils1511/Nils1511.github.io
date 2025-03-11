@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirmal Solanki | ML Engineer & AI Researcher</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #4338ca;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        nav {
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li a {
+            display: block;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+            margin: 0.5rem auto;
+        }
+        
+        .profile {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            overflow: hidden;
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: var(--light-gray);
+            border-radius: 20px;
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .skill-tag {
+            background-color: var(--light-gray);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .experience-item, .project-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .experience-item h3, .project-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-item .meta, .project-item .meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            text-align: center;
+        }
+        
+        .contact-info p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Nirmal Solanki</h1>
+            <p>ML Engineer & AI Researcher</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about">
+        <div class="container">
+            <div class="profile">
+                <div class="profile-img">
+                    <img src="image.jpg" alt="Nirmal Solanki">
+                </div>
+                <h2>About Me</h2>
+                <p>I'm an ML Engineer and AI Researcher with expertise in developing and implementing machine learning models for various applications. My work spans from building foundational LLMs to creating advanced image captioning systems and exploring algorithmic fairness.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Nils1511?tab=repositories" title="GitHub">GitHub</a>
+                    <a href="https://www.linkedin.com/in/nirmal-solanki-7a1726201/" title="LinkedIn">LinkedIn</a>
+                    <!-- <a href="#" title="Twitter">Twitter</a> -->
+                    <a href="mailto:nilssolanki15@gmail.com" title="Email">Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <h3>AI Researcher</h3>
+                <div class="meta">
+                    <span>Boltzmann Labs</span>
+                    <span>Jan 2025 - Present</span>
+                </div>
+                <ul>
+                    <li>Developed and implemented machine learning-driven force fields for precise molecular dynamics simulation of protein-ligand interactions.</li>
+                    <li>Analyzed datasets SPICE, QM9, ANI1, MD and benchmarked classical AMBER, CHARMM force fields for performance improvements.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>ML Engineer</h3>
+                <div class="meta">
+                    <span>Truefan</span>
+                    <span>July - Sep 2024</span>
+                </div>
+                <ul>
+                    <li>Awarded Letter of Recommendation for demonstrating strong work ethic and critical problem-solving skills.</li>
+                    <li>Enhanced lip-sync modules by refining facial landmark detection and alignment through multiple GitHub projects; gained practical experience with TTS and STT.</li>
+                    <li>Designed and deployed robust machine learning solutions using Docker containerization.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Electrical & Controls Head</h3>
+                <div class="meta">
+                    <span>SPART - Solar Powered Airship Research Team, IIT Bombay</span>
+                    <span>May 2022 - Jan 2024</span>
+                </div>
+                <ul>
+                    <li>Team's Control Head of a 20+ members team representing India at the World Solar Airship Race.</li>
+                    <li>Building solar-powered autonomous airship to fly 6000+ km across Atlantic Ocean with hydrogen lifting gas.</li>
+                    <li>Demonstrated mastery by achieving full remote control of and successfully flying over 3+ airships at diverse platforms.</li>
+                    <li>Showcased a highly agile indoor Airship flight to an audience of 1500+ at E-Summit 2023, utilizing Pixhawk 2.4.8 flight controller for a successful prototype demonstration within the grand convocation hall.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="container">
+            <h2>Key Projects</h2>
+            
+            <div class="project-grid">
+                <div class="project-item">
+                    <h3>LLM Work</h3>
+                    <div class="meta">
+                        <span>Self Project</span>
+                        <span>Winter 2024</span>
+                    </div>
+                    <p>Built a foundational large language model by implementing tokenization, embedding generation, & model architecture design, utilizing extensive preprocessing and training on the book.</p>
+                    <p>Fine-tuned a pre-trained language model to adapt to domain-specific task of email classification for SPAM or not, employing transfer learning, customized training pipelines, & temperature parameter experimentation.</p>
+                </div>
+                
+                <div class="project-item">
+                    <h3>Image Captioning</h3>
+                    <div class="meta">
+                        <span>Course Project, IIT Bombay</span>
+                        <span>Summer 2022</span>
+                    </div>
+                    <p>Developed an Image Captioning System integrating Transformers for vision encoding and BERT for text decoding, enabling accurate and context-aware image descriptions.</p>
+                    <p>Designed and implemented a dual-encoder architecture combining CNN (ResNet) for feature extraction and Transformer-based language models for sequence generation, improving caption quality and coherence.</p>
+                </div>
+                
+                <div class="project-item">
+                    <h3>Navigating Algorithmic Fairness</h3>
+                    <div class="meta">
+                        <span>Course Project, IIT Bombay</span>
+                        <span>Oct-Nov 2023</span>
+                    </div>
+                    <p>Developed a CNN model for facial detection. Trained and evaluated the model on CelebA and ImageNet datasets.</p>
+                    <p>Utilized Variational Autoencoders(VAEs) to uncover latent biases, & designed SS-VAE for automated bias mitigation.</p>
+                    <p>Explored how reconstruction loss, and latent variables impact bias detection and classification accuracy.</p>
+                </div>
+                
+                <div class="project-item">
+                    <h3>Quantitative Stock Analysis and Adaptive Trading System</h3>
+                    <div class="meta">
+                        <span>Course Project, IIT Bombay</span>
+                        <span>Aug-Sep 2023</span>
+                    </div>
+                    <p>Visualized minute-by-minute & day-by-day stock data, identifying anomalies for insightful analysis of S&P 500.</p>
+                    <p>Engineered flexible PyTorch LSTM module, allowing seamless adaptation to changing input dimensions, units, & layers.</p>
+                    <p>Developed a robust trading module, incorporating buy-ask spread and commissions, achieved profitable results.</p>
+                </div>
+                
+                <div class="project-item">
+                    <h3>Image Segmentation</h3>
+                    <div class="meta">
+                        <span>Course Project, IIT Bombay</span>
+                        <span>Nov 2022</span>
+                    </div>
+                    <p>Developed a complex image segmentation model using a U-Net architecture to segment tissue regions in medical images.</p>
+                    <p>Showcased technical prowess by implementing complex deep learning architectures, including down-sampling, up-sampling, and concatenation layers in the U-Net model.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            
+            <div class="skills">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Celery</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag">Kafka</span>
+                <span class="skill-tag">Transformers</span>
+                <span class="skill-tag">CNN</span>
+                <span class="skill-tag">GAN</span>
+                <span class="skill-tag">Diffusion</span>
+                <span class="skill-tag">VAEs</span>
+                <span class="skill-tag">LSTM</span>
+                <span class="skill-tag">VQ-VAE</span>
+                <span class="skill-tag">TTS</span>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            
+            <div class="contact-info">
+                <p>Email: <a href="mailto:nilssolanki15@gmail.com">nilssolanki15@gmail.com</a></p>
+                <p>Phone: <a href="tel:+917987543987">+91 7987543987</a></p>
+                <p>Feel free to reach out for collaborations, job opportunities, or just to say hello!</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Nirmal Solanki. All rights reserved.</p>
+            <p>Contact: nilssolanki15@gmail.com | +91 7987543987</p>
+        </div>
+    </footer>
+</body>
+</html>
